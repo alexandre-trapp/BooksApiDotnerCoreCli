@@ -6201,11 +6201,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\BooksApiDotnerCoreCli\\BooksApi.csproj",
+      "projectUniqueName": "C:\\Projetos\\BooksApiDotnetCoreCli\\BooksApi.csproj",
       "projectName": "BooksApi",
-      "projectPath": "C:\\Projetos\\BooksApiDotnerCoreCli\\BooksApi.csproj",
+      "projectPath": "C:\\Projetos\\BooksApiDotnetCoreCli\\BooksApi.csproj",
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\BooksApiDotnerCoreCli\\obj\\",
+      "outputPath": "C:\\Projetos\\BooksApiDotnetCoreCli\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
