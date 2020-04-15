@@ -24,7 +24,7 @@ namespace BooksApi.Controllers {
         [HttpGet]
         public ActionResult<List<Book>> Get() {
 
-            ConsumeMessageBroker.Consume(_logger);
+            ConsumeMessageBroker.Consume();
 
             return _bookService.Get();
         }
