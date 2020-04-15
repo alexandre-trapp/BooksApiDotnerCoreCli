@@ -24,6 +24,7 @@ namespace BooksApi.Controllers {
         public ActionResult<List<Book>> Get() =>
             _bookService.Get();
 
+
         [HttpGet("{id:length(24)}", Name = "GetBook")]
         public ActionResult<Book> Get(string id) {
             var book = _bookService.Get(id);
@@ -41,7 +42,7 @@ namespace BooksApi.Controllers {
             try {
 
                 _bookService.Create(book);
-                SendMessage(book);
+                SendMessageBroker(book);
 
                 return CreatedAtRoute("GetBook", new { id = book.Id.ToString() }, book);
             }
@@ -52,8 +53,8 @@ namespace BooksApi.Controllers {
             }
         }
 
-        private void SendMessage(Book book) {
-            
+        private void SendMessageBroker(Book book) {
+
             SendBookMessageBroker.Send(book, _logger);
         }
 

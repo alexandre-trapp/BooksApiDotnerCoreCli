@@ -1,8 +1,8 @@
 using System.Text;
 using System.Text.Json;
 using BooksApi.Models;
-using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
+using Microsoft.Extensions.Logging;
 
 namespace BooksApi.Services {
     public static class SendBookMessageBroker {
