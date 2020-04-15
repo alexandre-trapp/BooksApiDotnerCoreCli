@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using BooksApi.Models;
 using BooksApi.Services;
+using BooksApi.Services.Consumer;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -21,9 +22,12 @@ namespace BooksApi.Controllers {
         }
 
         [HttpGet]
-        public ActionResult<List<Book>> Get() =>
-            _bookService.Get();
+        public ActionResult<List<Book>> Get() {
 
+            ConsumeMessageBroker.Consume(_logger);
+
+            return _bookService.Get();
+        }
 
         [HttpGet("{id:length(24)}", Name = "GetBook")]
         public ActionResult<Book> Get(string id) {
